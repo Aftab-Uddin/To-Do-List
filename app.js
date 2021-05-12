@@ -4,6 +4,7 @@ const date = require(__dirname + '/date.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const items = ['Buy Food', 'Cook Food', 'Eat Food']
 const workItems = []
@@ -46,6 +47,6 @@ app.get('/', function(req, res){
     })
 
 
-app.listen(3000, function(){
-    console.log('running on port 3000')
+app.listen(port, function(){
+    console.log('running on port ' + port)
 })
